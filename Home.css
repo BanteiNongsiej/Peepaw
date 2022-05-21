@@ -6,15 +6,16 @@
     box-sizing: border-box;
 }
 body{
-    background: rgba(0, 0, 0, 0.3)url('pet_pic2.jpg');
-    background-blend-mode:darken ;
+    background:rgba(0,0,0,0.3) url(pet_pic2.jpg);
     background-size: cover;
+    background-blend-mode:darken ;
     background-attachment: fixed;
 }
 nav{
     background: white;
     height: 85px;
     width: 100%;
+    box-shadow: 0 0 5px grey;
 }
 nav > a{
     float: right;
@@ -30,20 +31,22 @@ nav > a{
 }
 .useroption {
     /* align-content: space-between; */
-    width: 80%;
-    height: 85px;
+    width: 100%;
+    height: 100px;
     font-size: 19px;
-    float: right;
+    float: left;
     /* display: flex; */
     padding: 10px 10px;
     margin: 5px;
     margin-right: 15px;
 
 }
-.option{
+.option a {
+  word-spacing: 0px;
   float: right;
   margin-top: 15px;
-  margin-right: 15px;
+  margin-right: 60px;
+  padding-left: -60px;
 }
 .useroption .sell .fa-solid{
     margin-right: 0px;
@@ -51,8 +54,30 @@ nav > a{
 .useroption .fa-solid {
     margin-right: 10px;
 }
+.menu a i{
+    float: right;
+    padding: 16px;
+}
 .sub-menu{
-    display: inline-block;
+    float: right;
+    margin-right: -222px;
+    margin-top: 71px;
+    padding-left: 50px;
+    width: 280px;
+    padding: 30px; 
+    background-color: white;
+    box-shadow: 0 0 5px gray ;
+    display: none;
+}
+
+.sub-menu ul a i{
+    margin-top: 20px;
+}
+.sub-menu ul a{
+    font-family:Arial, Helvetica, sans-serif ;
+}
+.sub-menu ul:hover{
+background-color: #c7dcff;
 }
 .menubar ul li:hover .sub-menu{
     display: block;
@@ -60,7 +85,9 @@ nav > a{
     background-color: aliceblue;
     margin-top: 15px;
     margin-left: 15px;
-
+}
+.block_div{
+    display: block;
 }
 .logo img{
     padding:0 10px;
@@ -118,93 +145,4 @@ nav > a{
 }
 .search:focus{
     outline: none;
-}
-.bg-modal{
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.7);
-    position: absolute;
-    top: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    /* display: none; */
-}
-.modal-content{
-    width: 500px;
-    height: 300px;
-    background-color: white;
-    border-radius: 4px;
-    text-align: center;
-    pad: 20px;
-    position: relative;
-}
- h1{
-    font-size: 20px;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-}
-form {
-    margin-top: 20px;
-  }
-  form .input_box{
-    height: 50px;
-    width: 100%;
-    position: relative;
-    margin-top: 15px;
-  }
-  .input_box input{
-    height: 80%;
-    width: 80%;
-    outline: none;
-    border: 1px solid lightgrey;
-    border-radius: 5px;
-    padding-left: 45px;
-    font-size: 15px;
-    transition: all 0.3s ease;
-  }
-  .input_box input:focus{
-    border-color: #be2edd;
-  }
-  .input_box .icon{
-    position: absolute;
-    top: 40%;
-    left: 65px;
-    transform: translateY(-50%);
-    color: grey;
-  }
-  .button input{
-    height: 35px;
-  padding-left: 0;
-  background: #b21fd3;
-  color: #fff;
-  border: none;
-  font-size: 17px;
-  font-weight: 500;
-  cursor: pointer;
-  transition: all 0.3s linear;
-}
-.button input:hover{
-  background: #5c0670;
-}
-form .register{
-  text-align: center;
-  margin-top: 5px;
-}
-.register a{
-  color: #730b8a;
-}
-form a{
-    text-decoration: none;
-  }
-  form a:hover{
-    text-decoration: underline;
-  }
-.close{
-    position: absolute;
-    top: 0;
-    right: 11px;
-    font-size: 30px;
-    font-weight: bold;
-    transform: rotate(45deg);
-    cursor:pointer ;
 }

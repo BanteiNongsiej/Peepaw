@@ -5,34 +5,28 @@
     <meta charset="UTF-8">
    <!---- <title> Login Form | CodingLab </title>--->
     <link rel="stylesheet" href="peepawloginboard.css">
-    <title>Peepaw Sign in Board</title>
+    <title>Peepaw SignIn</title>
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"/>
    </head>
 <body>
   <div class="main_div">
-    <label for="chk" class="cross-btn">
-      <i class="fas fa-times"></i>
-    </label>
     <div class="title">Sign In to Peepaw</div>
-    <form action="#">
+    <form action="php/login.php" method="post">
       <div class="input_box">
-        <input type="text" placeholder="Username" required>
+        <input type="text" placeholder="Username" name="name" required>
         <div class="icon"><i class="fas fa-user"></i></div>
       </div>
       <div class="input_box">
-        <input type="password" placeholder="Password" required>
+        <input type="password" placeholder="Password" name="password" required>
         <div class="icon"><i class="fas fa-lock"></i></div>
       </div>
       <div class="input_box button">
         <input type="submit" value="Sign In">
       </div>
       <div class="register">
-        Not a member? <a href="#">Register now</a>
+        Not a member? <a href="peepawregisterboard.html">Register now</a>
       </div>
     </form>
   </div>
-<script>
-  document.
-</script>
 </body>
 </html>

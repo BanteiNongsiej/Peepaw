@@ -1,0 +1,91 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Peepaw</title>
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <link rel="stylesheet" href="../Home.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <script src="peepawdashboard.js"></script>
+</head>
+<body>
+    <?php
+    //include auth_session.php file on all user panel pages
+    include("../../../php/session_start.php");
+    ?>
+    <nav>
+    <div class="body-content">
+        <div class="logo"><img src="../peepaw3_logo.png"></div>
+        <div class="useroption">
+            <div class="option">
+                <a href="#"><i class="fa-solid fa-user-plus"></i>SELL</a>
+            </div>
+            <div class="dropbox" >
+                    <div  class="menu" id=" drop">
+                        <a href="#">
+                            <i class="fa-solid fa-bars"></i>
+                        </a>
+                    </div>
+                    <div class="sub-menu" id="sub_menu_id">  
+                        <ul>
+                            <li><a href="#"><i class="fa-solid fa-user"></i>My Account</a></li>
+                        </ul>
+                        <ul>
+                           <a href="#"><i class="fa-solid fa-heart"></i>Wishlists</a>
+                        </ul>
+                        <ul>
+                            <a href="#"><i class="fa-solid fa-rectangle-ad"></i> My Ads</a>
+                         </ul>
+                        <hr>
+                        <ul>
+                            <a href="#"><i class="fa-solid fa-gear"></i>Settings</a>
+                        </ul>
+                        <ul>
+                            <a href="#"><i class="fa-solid fa-ban"></i>About</a>
+                        </ul>
+                        <ul>
+                            <a href="#"><i class="fa-solid fa-id-card"></i>Contact Us</a>
+                        </ul>
+                        <ul>
+                            <a href="#"><i class="fa-solid fa-comment-dots"></i>Feedback</a>
+                        </ul>
+
+                        <hr>
+
+                        <ul>
+                            <a href="#"><i class="fa-solid fa-right-from-bracket"></i>Sign Out</a>
+                        </ul> 
+                </div> 
+            </div>
+        </div>  
+    </div>
+    </nav>
+    <div class="main">
+        <h1>Welcome to Peepaw</h1>
+        <h2>BEST PET LOVER COMMUNITY</h2>
+        <div class="search-contain">
+            <table class="element-contain">
+                <tr>
+                    <td>
+                        <input type="text" placeholder="Search" class="search">
+                    </td>
+                    <td>
+                        <a href="#"><i class="fa-solid fa-magnifying-glass"></i></a>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <script>
+        let drop = document.getElementById('drop');
+        let sub_menu_id = document.getElementById('sub-menu_id');
+        drop.addEventListener('click',()=>{
+            sub_menu_id.classList.toggle('block_div')
+        });
+    </script>
+</body>
+</html>

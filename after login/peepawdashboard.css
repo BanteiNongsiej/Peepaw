@@ -6,8 +6,8 @@
     box-sizing: border-box;
 }
 body{
-    background: rgba(0, 0, 0, 0.3)url('pet_pic2.jpg');
-    background-blend-mode:darken ;
+    background-image: url('../pet_pic2.jpg');
+    background-color: rgba(0, 0, 0, 0.5);
     background-size: cover;
     background-attachment: fixed;
 }

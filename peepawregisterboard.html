@@ -3,36 +3,52 @@
   <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="peepawregisterboard.css">
-    <title>Peepaw Sign in Board</title>
+    <title>Peepaw Register</title>
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"/>
    </head>
 <body>
-    <form action="#">
-      <div class="input_box">
-        <div class="title">Register yourself to Peepaw</div>
-        <input type="text" placeholder="Full Name" required>
-        <div class="icon"><i class="fas fa-user"></i></div>
-        <input type="text" placeholder="Mobile Number" required>
-        <div class="icon"><i class="fa-solid fa-mobile-screen"></i></div>
-        <input type="text" placeholder="Locality Name" required>
-        <div class="icon"><i class="fa-solid fa-earth-asia"></i></div>
-        <input type="text" placeholder="Street Name" required>
-        <div class="icon"><i class="fa-solid fa-road"></i></div>
-        <input type="text" placeholder="Pin Code Number" required>
-        <div class="icon"><i class="fa-solid fa-map-pin"></i></div>
-        <input type="text" placeholder="City Name" required>
-        <div class="icon"><i class="fa-solid fa-city"></i></div>
-        <input type="text" placeholder="Email Id" required>
-        <div class="icon"><i class="fa-solid fa-envelope"></i></div>
-        <input type="password" placeholder="Password" required>
-        <div class="icon"><i class="fas fa-lock"></i></div>
+  <div class="main_div">
+    <div class="title">Register To PeePaw</div>
+    <form action="php/register.php" method="post">
+        <div class="input_box">
+          <input type="text" placeholder="Full Name" name="name" required>
+          <div class="icon"><i class="fas fa-user"></i></div>
+        </div>    
+        <div class="input_box">
+          <input type="text" placeholder="Mobile Number" name="mobile" required>
+          <div class="icon"><i class="fa-solid fa-mobile-screen"></i></div>
+        </div>
+        <div class="input_box">
+          <input type="text" placeholder="Locality Name" name="locality" required>
+          <div class="icon"><i class="fa-solid fa-earth-asia"></i></div>
+        </div>
+        <div class="input_box">
+          <input type="text" placeholder="Street Name" name="street" required>
+          <div class="icon"><i class="fa-solid fa-road"></i></div>
+        </div>
+        <div class="input_box">
+          <input type="text" placeholder="Pin Code Number" name="pin" required>
+          <div class="icon"><i class="fa-solid fa-map-pin"></i></div>
+        </div>
+        <div class="input_box">
+          <input type="text" placeholder="City Name" name="city" required>
+          <div class="icon"><i class="fa-solid fa-city"></i></div>
+        </div>
+        <div class="input_box">
+          <input type="text" placeholder="Email Id" name="email" required>
+          <div class="icon"><i class="fa-solid fa-envelope"></i></div>
+        </div>
+        <div class="input_box">
+          <input type="password" placeholder="Password" name="password" required>
+          <div class="icon"><i class="fas fa-lock"></i></div>
+        </div>
         <div class="input_box button">
-        <input type="submit" value="Register">
-      </div>
+          <input type="submit" value="Register">
+        </div>
       <!-- <div class="option_div">
       </div> -->
       <div class="sign_in">
-        Already a member? <a href="#">Sign In Now</a>
+        Already a member? <a href="peepawloginboard.html">Sign In Now</a>
       </div>
     </form>
   </div>

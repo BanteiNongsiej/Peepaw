@@ -1,116 +1,116 @@
 *{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Poppins',sans-serif;
-  }
-  html,body{
-    display: grid;
-    height: 100vh;
-    place-items:center;
-    background:white;
-  }
-  /* .main_div{
-    height: 550pxpx;
-    width: 365px;
-    background: #fff;
-    padding: 30px;
-    border-radius: 5px;
-    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.15);
-  }*/
-  .title{
-      font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    /* text-align: center; */
-    font-size: 20px;
-    font-weight: 600;
-  } 
-  
-  form {
-    /* margin-top: -80px; */
-  }
-  form .input_box{
-    align-items: center;
-    margin-left: 35%;
-    height: 30px;
-    width: 100%;
-    margin-top: 5px;
-    /* position: absolute; */
-    /* margin-top: 100px; */
-    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.15);
-  }
-  .input_box input{
-    height: 100%;
-    width: 50%;
-    margin-top: 1px;
-    outline: none;
-    border: 1px solid lightgrey;
-    border-radius: 5px;
-    padding-left: 45px;
-    font-size: 15px;
-    transition: all 0.3s ease;
-  }
-  .input_box input:focus{
-    margin-top: 5px;
-    border-color: #be2edd;
-  }
-  .input_box .icon{
-    position: absolute;
-    top: 10%;
-    left: 15px;
-    /* transform: translateY(-50%); */
-    color: grey;
-  }
-  form .option_div{
-    margin-top: 1px;
-    display: flex;
-    justify-content: space-between;
-  }
-  .option_div .check_box{
-    display: flex;
-    align-items: center;
-  }
-  .option_div span{
-    margin-left: 5px;
-    font-size: 16px;
-    color: #333;
-  }
-  .option_div .forget_div a{
-    font-size: 16px;
-    color: #730b8a;
-  }
-  .button input{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins',sans-serif;
+}
+html,body{
+  display: grid;
+  height: 100vh;
+  place-items:center;
+  background:white;
+  background: rgba(0, 0, 0, 0.3)url('pet_pic2.jpg');
+  background-blend-mode: darken;
+  background-size: cover;
+  background-attachment: fixed;
+  opacity: 0.5px;
+}
+.main_div{
+  width: 365px;
+  background: #fff;
+  padding: 30px;
+  border-radius: 5px;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.15);
+}
+.main_div .title{
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  text-align: center;
+  font-size: 25px;
+  font-weight: 600;
+}
+
+form {
+  margin-top: 20px;
+}
+form .input_box{
+  height: 40px;
+  width: 100%;
+  margin-top: 0px;
+  position: relative;
+  margin-top: 15px;
+}
+.input_box input{
+  height: 80%;
+  width: 100%;
+  outline: none;
+  border: 1px solid lightgrey;
+  border-radius: 5px;
+  padding-left: 45px;
+  padding-top: 0px;
+  font-size: 15px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  transition: all 0.3s ease;
+}
+.input_box input:focus{
+  border-color: #be2edd;
+}
+.input_box .icon{
+  position: absolute;
+  top: 40%;
+  left: 15px;
+  transform: translateY(-50%);
+  color: grey;
+}
+form .option_div{
+  margin-top: 1px;
+  display: flex;
+  justify-content: space-between;
+}
+.option_div .check_box{
+  display: flex;
+  align-items: center;
+}
+.option_div span{
+  margin-left: 5px;
+  font-size: 16px;
+  color: #333;
+}
+.option_div .forget_div a{
+  font-size: 16px;
+  color: #730b8a;
+}
+.button input{
     height: 35px;
-    padding-left: 0;
-    background: #b21fd3;
-    color: #fff;
-    border: none;
-    font-size: 17px;
-    font-weight: 500;
-    cursor: pointer;
-    transition: all 0.3s linear;
-  }
-  .button input:hover{
-    background: #5c0670;
-  }
-  form .sign_in{
-    text-align: center;
-    align-items: center;
-    margin-top: 20px;
-  }
-  .sign_in a{
-    color: #730b8a;
-  }
-  form a{
-    text-decoration: none;
-  }
-  form a:hover{
-    text-decoration: underline;
-  }
-  .cross-btn{
-    float: right;
-    padding:0px;
-  }
-  .cross-btn:hover{
-    color:blue;
-  }
-  
+  padding-left: 0;
+  background: #b21fd3;
+  color: #fff;
+  border: none;
+  font-size: 17px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s linear;
+}
+.button input:hover{
+  background: #5c0670;
+}
+form .register{
+  text-align: center;
+  margin-top: 15px;
+}
+.register a{
+  color: #730b8a;
+}
+form a{
+  text-decoration: none;
+}
+form a:hover{
+  text-decoration: underline;
+}
+.cross-btn{
+  float: right;
+  padding:0px;
+}
+.cross-btn:hover{
+  color:blue;
+}
