@@ -9,7 +9,7 @@ html,body{
   height: 100vh;
   place-items:center;
   background:white;
-  background: rgba(0, 0, 0, 0.3)url('pet_pic2.jpg');
+  background: rgba(0, 0, 0, 0.4)url('pet_pic2.jpg');
   background-blend-mode: darken;
   background-size: cover;
   background-attachment: fixed;

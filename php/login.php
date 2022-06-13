@@ -1,7 +1,7 @@
 <?php
-    require 'database_connect.php';
+    require ('database_connect.php');
     session_start();
-    if (isset($_POST['name'])&& isset($_POST['password'])){
+    if (isset($_POST['name']) && isset($_POST['password'])){
         $name=($_POST['name']);
         $password=($_POST['password']);
         $query="SELECT * FROM `users` WHERE name='$name'";
@@ -13,15 +13,15 @@
         if($verify){
             if ($row['name'] == $name ) {
                 echo "Logged in!";
-                $_SESSION['id'] = $row['id'];
+                $_SESSION['id'] = $row['u_id'];
                 $_SESSION['name'] = $row['name'];
                 // $_SESSION['first_name'] = $row['first_name'];
-                header("Location:../after login/Home.html");
+                header("Location:../after login/Peepawhome.php");
                 exit();
             }
             else{
                 echo "<div class='form'>
-                <h3>Incorrect Email/Password.</h3><br/>
+                <h3>Incorrect name or Password.</h3><br/>
                 <p class='link'>Click here to <a href='login.php'>Login</a> again.</p>
                 </div>";
                 }

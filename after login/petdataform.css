@@ -1,0 +1,208 @@
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+#test1{
+    margin-left: 84px;
+    height: 100px;
+    width: 100px;
+}
+#test2{
+    height: 100px;
+    width: 100px;
+}
+#test3{
+    height: 100px;
+    width: 100px;
+}
+#test4{
+    height: 100px;
+    width: 100px;
+}
+#test5{
+    height: 100px;
+    width: 100px;
+}
+body{
+    background:rgba(0,0,0,0.4) url('pet_pic2.jpg');
+    background-size: cover;
+    background-blend-mode:darken ;
+    background-attachment: fixed;
+}
+nav{
+    background: white;
+    height: 85px;
+    width: 100%;
+    box-shadow: 0 0 5px grey;
+}
+nav > a{
+    float: right;
+}
+.body-content{
+  display: flex;
+  width: 100%;
+  height: 85px;
+}
+.logo{
+  width: 20%;
+  height: inherit;
+}
+.useroption {
+    /* align-content: space-between; */
+    width: 100%;
+    height: 100px;
+    font-size: 19px;
+    float: left;
+    /* display: flex; */
+    padding: 10px 10px;
+    margin: 5px;
+    margin-right: 15px;
+}
+.useroption .sell .fa-solid{
+    margin-right: 0px;
+}
+.useroption .fa-solid {
+    margin-right: 10px;
+}
+.menu a i{
+    float: right;
+    padding: 16px;
+}
+.sub-menu{
+    float: right;
+    border-radius: 0px 0px 4px 4px;
+    margin-right: -84px;
+    margin-top: 71px;
+    padding-left: 50px;
+    width: 280px;
+    padding: 30px; 
+    background-color: white;
+    box-shadow: 0 0 5px gray ;
+    transition: 0.3s;
+    display: none;
+}
+.sub-menu ul a i{
+    margin-top: 20px;
+}
+.sub-menu ul a{
+    font-family:Arial, Helvetica, sans-serif ;
+}
+.sub-menu ul:hover{
+background-color: #c7dcff;
+}
+.menubar ul li:hover .sub-menu{
+    display: block;
+    position: absolute;
+    background-color: aliceblue;
+    margin-top: 15px;
+    margin-left: 15px;
+}
+.block_div{
+    display: block;
+}
+.logo img{
+    padding:0 10px;
+    width: -6px;
+    margin-top: 8px;
+    height:65px;
+    align-items:left;
+    display: flex;
+    float: left;
+}
+input[type=text],input[type=number],input[type=date]
+{
+    width: 100%;
+    height: 100%;
+    padding: 12px;
+    border: 1px solid rgb(168, 166, 166);
+    border-radius: 4px;
+    resize: vertical;
+}
+textarea{
+    width:100%;
+    padding: 10px;
+    border: 1px solid rgb(168, 166, 166);
+    border-radius: 4px;
+    resize: vertical;
+}
+input[type=radio]{
+    width: 5%;
+    padding-left: 0%;
+    border: 1px solid rgb(168, 166, 166);
+    border-radius: 4px;
+    resize: vertical;
+    margin-top: 5px;
+}
+h1{
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: larger;
+    font-style: normal;
+    font-weight: bold;
+    margin-top: 10px;
+    color: brown;
+    text-align: center;
+    text-decoration: underline;
+}
+label{
+    width: 100px;
+    margin-bottom: 5px;
+    padding: 5px 5px 5px 0;
+    display: inline-block;
+}
+input[type=submit] {
+    background-color:#b21fd3 ;
+    color: white;
+    width: 20%;
+    padding: 15px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    float:right;
+}
+input[type=submit]:hover {
+background-color: #5c0670;
+}
+form{
+    border-radius: 5px;
+    background-color:#f2f2f2;
+    padding: 25px;
+    width: 70%;
+    margin-right: 0%;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-left: 15%;
+}
+.col-10{
+    float: left;
+    width: 10%;
+    margin-top: 6px;
+}
+.col-90{
+    float: left;
+    width: 90%;
+    margin-top: 6px;
+    padding-left: 80px;
+    display: block;
+}
+.col-80{
+    float: left;
+    width: 25%;
+    margin-top:6px ;
+    padding-left: 80px;
+}
+
+.row:after{
+    content: "";
+    display: table;
+    clear: both;
+}
+@media screen and (max-width: 600px) {
+    .col-10,.col-90,input[type=submit]{
+        width: 100%;
+        margin-top: 0;
+    }
+}
+

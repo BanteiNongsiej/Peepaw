@@ -1,0 +1,235 @@
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+body{
+    background:rgba(0,0,0,0.3) url(pet_pic2.jpg);
+    background-size: cover;
+    background-blend-mode:darken ;
+    background-attachment: fixed;
+}
+nav{
+    background: white;
+    height: 85px;
+    width: 100%;
+    box-shadow: 0 0 5px grey;
+}
+nav > a{
+    float: right;
+}
+.body-content{
+  display: flex;
+  width: 100%;
+  height: 85px;
+}
+.logo{
+  width: 20%;
+  height: inherit;
+}
+.useroption {
+    /* align-content: space-between; */
+    width: 100%;
+    height: 100px;
+    font-size: 19px;
+    float: left;
+    /* display: flex; */
+    padding: 10px 10px;
+    margin: 5px;
+    margin-right: 15px;
+
+}
+.option a {
+  word-spacing: 0px;
+  float: right;
+  margin-top: 15px;
+  margin-right: 60px;
+  padding-left: -60px;
+}
+.useroption .sell .fa-solid{
+    margin-right: 0px;
+}
+.useroption .fa-solid {
+    margin-right: 10px;
+}
+.menu a i{
+    float: right;
+    padding: 16px;
+}
+.sub-menu{
+    float: right;
+    margin-right: -222px;
+    margin-top: 71px;
+    padding-left: 50px;
+    width: 280px;
+    padding: 30px; 
+    border-radius: 0px 0px 4px 4px;
+    background-color: white;
+    box-shadow: 0 0 5px gray ;
+    display: none;
+    z-index: 1;
+}
+
+.sub-menu ul a i{
+    margin-top: 20px;
+}
+.sub-menu ul a{
+    font-family:Arial, Helvetica, sans-serif ;
+}
+.sub-menu ul:hover{
+background-color: #c7dcff;
+}
+.menubar ul li:hover .sub-menu{
+    display: block;
+    position: absolute;
+    background-color: aliceblue;
+    margin-top: 15px;
+    margin-left: 15px;
+}
+.block_div{
+    display: block;
+}
+.logo img{
+    padding:0 10px;
+    width: -6px;
+    margin-top: 8px;
+    height:65px;
+    align-items:left;
+    display: flex;
+    float: left;
+}
+
+/* Product */
+
+.product_img{
+    width: 1000px;
+    display: flex;
+    margin: auto;
+    margin-bottom: 100px;
+    background-color: wheat;
+    margin-top: 14px;
+    z-index: 0;
+}
+.image_description{
+    width: 500px;
+    background-color: white;
+}
+.image_description img{
+    width: 350px;
+    margin-top: 20px;
+    margin-bottom: 26px;
+    margin-left: 75px;
+    display: flex;
+    height: 300px;
+    border: gray solid;
+}
+#prev{
+    color:black;
+}
+#next{
+    color: black;
+}
+.species-like{
+    display: flex;
+    justify-content: space-between;
+}
+.species-like .icon{
+    padding: 15px;
+    size: 50px;
+    color: black;
+}
+.species-like .icon:hover{
+    color: red;
+}
+.pet_description{
+    padding-left: 20px;
+    padding-right: 15px;
+    border: 1px solid rgb(196, 194, 194);
+    background-color: aliceblue;
+    padding-bottom: 15px;
+    width: 114%;
+    height: 160px;
+    z-index: 0;
+}
+.pet_description h3{
+    padding: 10px 10px 10px 0;
+    font-size: 25px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.seller h5{
+    font-size: 25px;
+    margin-top: 20px;
+    margin-left: 16px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.seller_description{
+    margin-left: 16px;
+}
+.product{
+    background-color: white;
+    padding-top: 1px;
+    margin-top: -81px;
+    width: 100%;
+    margin-bottom: 0%;
+}
+.first_row{
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    margin: auto;
+    margin-top: 35px;
+    background-color: white;
+}
+.box img{
+    height: 100px;
+    object-fit: cover;
+    width: 200px;
+    padding-left: 15px;
+    padding-top: 3px;
+    background-color: whitesmoke;
+}
+.box{
+    border: 1px solid rgb(197,196,196);
+    width: 217px;
+    background-color: whitesmoke;
+    margin-top: 3px;
+}
+.box hr{
+    border: none;
+}
+.box:hover{
+    border: 1px solid rgb(138,137,139);
+}
+.box a{
+    text-decoration: none;
+    color: black;
+}
+.box h1{
+    padding: 2px 1px 0px 10px;
+    font-size: 16px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.box p{
+    padding:2px 0 0 10px ;
+    font-size: 16px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.time {
+    padding:2px 0 0 10px  ;
+    font-size: 16px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    font-weight: lighter;
+    background-color: whitesmoke;
+}
+.time p{
+    font-size: 14px;
+}
+.time h4{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 16px;
+    font-weight: bolder;
+}

@@ -1,0 +1,249 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Peepaw Product</title>
+    <link rel="stylesheet" href="product2.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css"/>
+</head>
+<body>
+    <?php
+    //include auth_session.php file on all user panel pages
+    include("../../../php/session_start.php");
+    ?>
+    <nav>
+    <div class="body-content">
+        <div class="logo"><img src="../peepaw3_logo.png"></div>
+        <div class="useroption">
+            <div class="option">
+                <a href="petdataform.html"><i class="fa-solid fa-user-plus"></i>SELL</a>
+            </div>
+            <div class="dropbox" >
+                    <div  class="menu" id="drop">
+                        <a href="#">
+                            <i class="fa-solid fa-bars"></i>
+                        </a>
+                    </div>
+                    <div class="sub-menu" id="sub_menu_id">  
+                        <ul>
+                            <li><a href="#"><i class="fa-solid fa-user"></i>My Account</a></li>
+                        </ul>
+                        <ul>
+                           <a href="#"><i class="fa-solid fa-heart"></i>Wishlists</a>
+                        </ul>
+                        <ul>
+                            <a href="#"><i class="fa-solid fa-rectangle-ad"></i> My Ads</a>
+                         </ul>
+                        <hr>
+                        <ul>
+                            <a href="#"><i class="fa-solid fa-gear"></i>Settings</a>
+                        </ul>
+                        <ul>
+                            <a href="#"><i class="fa-solid fa-ban"></i>About</a>
+                        </ul>
+                        <ul>
+                            <a href="#"><i class="fa-solid fa-id-card"></i>Contact Us</a>
+                        </ul>
+                        <ul>
+                            <a href="#"><i class="fa-solid fa-comment-dots"></i>Feedback</a>
+                        </ul>
+                        <hr>
+                        <ul>
+                            <a href="../peepawdashboard.html"><i class="fa-solid fa-right-from-bracket"></i>Sign Out</a>
+                        </ul> 
+                </div> 
+            </div>
+        </div>  
+    </div>
+    </nav>
+    <div class="product_img">
+        <div class="image_description">
+            <div class="swiper">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide"><img src="../images/husky/husky1.jpg"></div>
+                  <div class="swiper-slide"><img src="../images/husky/husky2.jpg"></div>
+                  <!-- <div class="swiper-slide"><img src="../images/bulldog/bulldog3.jpg"></div> -->
+                </div>
+                <div class="swiper-pagination" ></div>
+                <div class="swiper-button-prev" id="prev"></div>
+                <div class="swiper-button-next" id="next"></div>
+              </div>
+             </div>
+        <div>
+        <div class="pet_description">
+            <div class="species-like">
+                  <h3>Dog</h3>
+                  <div class="icon">
+                    <p><i class="fa-regular fa-heart"></i></p>
+                 </div>
+            </div>
+            <p>₹56,000 </br>
+               Husky, Male, 3 months old, Unvaccinated</br>
+               He is healthy since birth. 
+          </p>
+        </div>
+        <div class="seller">
+            <h5>Seller Description</h5>
+            <div class="seller_description">
+            <br>John Black</br>
+                9574354689 </br>
+                Mawshbuit,East Khasi Hill District, 793005, Shillong, Meghalaya.</br>
+            </div>
+        </div>
+      </div>
+    </div>
+    <div class="product">
+        <div class="first_row">
+            <div class="box">
+                <a href="product2.html">
+                <img src="../images/husky/husky1.jpg">
+                <hr>
+                <h1>Dog</h1>
+                <p>₹55,000</p>
+                <div class="time">
+                    <h4>Husky</h4>
+                    <p>Today</p>
+                </div>
+            </a>
+            </div>
+            <div class="box">
+                <a href="#">
+                <img src="../images/persian cat/persian cat.jpg">
+                <hr>
+                <h1>Cat</h1>
+                <p>₹15,000</p>
+                <div class="time">
+                    <h4>Persian</h4>
+                    <p>1 Hours ago</p>
+                </div>
+            </a>
+            </div>
+            <div class="box">
+                <a href="#">
+                <img src="../images/bulldog/bulldog1.jpg">
+                <hr>
+                <h1>Dog</h1>
+                <p>₹26,000</p>
+                <div class="time">
+                    <h4>Bulldog</h4>
+                    <p>Yesterday</p>
+                </div>
+            </a>
+            </div>
+            <div class="box">
+                <a href="#"></a>
+                <img src="../images/german shepherd/german shepherd1.jpg">
+                <hr>
+                <h1>Dog</h1>
+                <p>₹35,000</p>
+                <div class="time">
+                    <h4>German Shephard</h4>
+                    <p>2 hours ago</p>
+                </div>
+            </a>
+            </div>
+        </div>
+        <div class="first_row">
+            <div class="box">
+                <a href="#">
+                <img src="../images/rex rabbit/rexrabbit1.jpg">
+                <hr>
+                <h1>Rabbit</h1>
+                <p>₹32,000</p>
+                <div class="time">
+                    <h4>Rex rabbit</h4>
+                    <p>Today</p>
+                </div>
+            </a>
+            </div>
+            <div class="box">
+                <a href="#">
+                <img src="../images/yorkshire/yorkshire1.jpg">
+                <hr>
+                <h1>Dog</h1>
+                <p>₹20,000</p>
+                <div class="time">
+                    <h4>Yorkshire</h4>
+                    <p>1 minute ago</p>
+                </div>
+            </a>
+            </div>
+            <div class="box">
+                <a href="#">
+                <img src="../images/british shorthair/british chorthair.jpg">
+                <hr>
+                <h1>Cat</h1>
+                <p>₹26,000</p>
+                <div class="time">
+                    <h4>British Shorthair</h4>
+                    <p>Yesterday</p>
+                </div>
+            </a>
+            </div>
+            <div class="box">
+                <a href="#">
+                <img src="../images/labrador retriever/labrador retriever1.png">
+                <hr>
+                <h1>Dog</h1>
+                <p>₹48,000</p>
+                <div class="time">
+                    <h4>Labrador</h4>
+                    <p>5 hours ago</p>
+                </div>
+            </a>
+            </div>
+        </div>
+        <div class="first_row">
+            <div class="box">
+                <a href="#">
+                <img src="../images/van cat/van cat1.jpg">
+                <hr>
+                <h1>Cat</h1>
+                <p>₹35,000</p>
+                <div class="time">
+                    <h4>Van Cat</h4>
+                    <p>Today</p>
+                </div>
+            </a>
+            </div>
+            <div class="box">
+                <a href="#">
+                <img src="../images/chichuahua/chihuahua1.jpg">
+                <hr>
+                <h1>Dog</h1>
+                <p>₹56,000</p>
+                <div class="time">
+                    <h4>Chihuahua</h4>
+                    <p>1 Hours ago</p>
+                </div>
+            </a>
+        </div>
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+    <script>
+        console.log("loaded")
+        let drop = document.getElementById('drop');
+        console.log(drop)
+        let sub_menu_id = document.getElementById('sub_menu_id');
+        console.log(sub_menu_id)
+        drop.addEventListener('click',()=>{
+            sub_menu_id.classList.toggle('block_div')
+        });
+        // Product_img
+        const swiper = new Swiper('.swiper', {
+            loop: true,
+            pagination: {
+            el: '.swiper-pagination',
+             },
+            navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+     },
+    });
+    </script>
+</body>
+</html>

@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Petdataform</title>
+    <link rel="stylesheet" href="petdataform.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+</head>
+<body>
+    <?php
+    //include auth_session.php file on all user panel pages
+    include("../../../php/session_start.php");
+    ?>
+    <nav>
+    <div class="body-content">
+        <div class="logo"><img src="../peepaw3_logo.png"></div>
+        <div class="useroption">
+            <div class="dropbox" >
+                    <div  class="menu" id="drop">
+                        <a href="#">
+                            <i class="fa-solid fa-bars"></i>
+                        </a>
+                    </div>
+                    <div class="sub-menu" id="sub_menu_id">  
+                        <ul>
+                            <li><a href="#"><i class="fa-solid fa-user"></i>My Account</a></li>
+                        </ul>
+                        <ul>
+                           <a href="#"><i class="fa-solid fa-heart"></i>Wishlists</a>
+                        </ul>
+                        <ul>
+                            <a href="#"><i class="fa-solid fa-rectangle-ad"></i> My Ads</a>
+                         </ul>
+                        <hr>
+                        <ul>
+                            <a href="#"><i class="fa-solid fa-gear"></i>Settings</a>
+                        </ul>
+                        <ul>
+                            <a href="#"><i class="fa-solid fa-ban"></i>About</a>
+                        </ul>
+                        <ul>
+                            <a href="#"><i class="fa-solid fa-id-card"></i>Contact Us</a>
+                        </ul>
+                        <ul>
+                            <a href="#"><i class="fa-solid fa-comment-dots"></i>Feedback</a>
+                        </ul>
+
+                        <hr>
+
+                        <ul>
+                            <a href="../php/logout.php"><i class="fa-solid fa-right-from-bracket"></i>Sign Out</a>
+                        </ul> 
+                </div> 
+            </div>
+        </div>  
+    </div>
+    </nav>
+    <form action="petdataform.php" method="post" onsubmit="handle_submit(e)">
+        <h1>Post Pet Form</h1>
+        <div class="row">
+            <div class="col-10">
+                <label for="p-species">Pet Species:</label>
+            </div>
+            <div class="col-90">
+                <input type="text" id="species" name="pet-species" required>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-10">
+                <label for="p-breed">Pet's Breed:</label>
+            </div>
+            <div class="col-90">
+                <input type="text" id="p_breed" name="breed" required>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-10">
+                <label for="gender" required>Gender:</label>
+            </div>
+            <div class="col-90">
+                <input type="radio" id="male" name="gender" value="male"/>Male
+                <input type="radio" id="female" name="gender" value="female"/>Female
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-10">
+                <label for="age" required >Age in Months:</label>
+            </div>
+            <div class="col-80">
+                <input type="text" id="age" name="age">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-10">
+                <label for="v-status" required>Vaccination Status:</label>
+            </div>
+            <div class="col-90">
+                <input type="radio" id="yes" name="vaccination" value="yes"/>YES
+                <input type="radio" id="no" name="vaccination" value="no"/>NO
+            </div>
+        </div>
+        </div>
+        <div class="row">
+            <div class="col-10">
+                <label for="image" required >Add Image:</label>
+            </div>
+            <div class="col-80">
+                <input type="file" onchange="handle_submit1()" id="image1" name="image">
+                <input type="file" onchange="handle_submit2()" id="image2" name="image2">
+                <input type="file" onchange="handle_submit3()" id="image3" name="image3">
+                <input type="file" onchange="handle_submit4()" id="image4" name="image4">
+                <input type="file" onchange="handle_submit5()" id="image5" name="image5">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-90">
+                <img src="" id="test1" alt="">
+                <img src="" id="test2" alt="">
+                <img src="" id="test3" alt="">
+                <img src="" id="test4" alt="">
+                <img src="" id="test5" alt="">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-10">
+                <label for="price" required>Price:</label>
+            </div>
+            <div class="col-90">
+                <input type="number" id="price" name="price" maxlength="6">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-10">
+                <label for="address">Description:</label>
+            </div>
+            <div class="col-90">
+                <textarea name="discription" id="discription" cols="30" rows="10"></textarea>
+            </div>
+        </div>
+        <div class="row">
+            <input type="submit" value="POST" onclick="handle_submit()">
+        </div>
+        
+        
+    </form>
+    <script>
+         console.log("loaded")
+         
+        let drop = document.getElementById('drop');
+        console.log(drop)
+        let sub_menu_id = document.getElementById('sub_menu_id');
+        console.log(sub_menu_id)
+        drop.addEventListener('click',()=>{
+            sub_menu_id.classList.toggle('block_div')
+        });
+
+        function handle_submit1(e){
+            // e.preventDefault();
+            let img = document.getElementById("image1").files[0];
+         console.log(img)
+         let x = new FileReader()
+         x.readAsDataURL(img)
+         x.onload = function(e){
+             let image1=new Image();
+             image1.src=e.target.result;
+             let test1=document.getElementById("test1");
+             console.log(image1.src)
+             image1.onload=function(){
+                 console.log(image1.src)
+                test1.src=image1.src;
+                document.cookie= `img1src = ${test1.src}`
+             }
+         }
+        }
+        function handle_submit2(e){
+            // e.preventDefault();
+            let img = document.getElementById("image2").files[0];
+         console.log(img)
+         let x = new FileReader()
+         x.readAsDataURL(img)
+         x.onload = function(e){
+             let image2=new Image();
+             image2.src=e.target.result;
+             let test2=document.getElementById("test2");
+             console.log(image2.src)
+
+             image2.onload=function(){
+                 console.log(image2.src)
+                test2.src=image2.src;
+             }
+         }
+        }
+    
+        function handle_submit3(e){
+            // e.preventDefault();
+            let img = document.getElementById("image3").files[0];
+         console.log(img)
+         let x = new FileReader()
+         x.readAsDataURL(img)
+         x.onload = function(e){
+             let image3=new Image();
+             image3.src=e.target.result;
+             let test3=document.getElementById("test3");
+             console.log(image3.src)
+
+             image3.onload=function(){
+                 console.log(image3.src)
+                test3.src=image3.src;
+             }
+         }
+        }
+        function handle_submit4(e){
+            // e.preventDefault();
+            let img = document.getElementById("image4").files[0];
+         console.log(img)
+         let x = new FileReader()
+         x.readAsDataURL(img)
+         x.onload = function(e){
+             let image4=new Image();
+             image4.src=e.target.result;
+             let test4=document.getElementById("test4");
+             console.log(image4.src)
+
+             image4.onload=function(){
+                 console.log(image4.src)
+                test4.src=image4.src;
+             }
+         }
+        }
+        function handle_submit5(e){
+            // e.preventDefault();
+            let img = document.getElementById("image5").files[0];
+         console.log(img)
+         let x = new FileReader()
+         x.readAsDataURL(img)
+         x.onload = function(e){
+             let image5=new Image();
+             image5.src=e.target.result;
+             let test5=document.getElementById("test5");
+             console.log(image5.src)
+
+             image5.onload=function(){
+                 console.log(image5.src)
+                test5.src=image5.src;
+             }
+         }
+        }
+    </script>
+    
+</body>
+</html>

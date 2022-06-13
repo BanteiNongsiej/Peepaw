@@ -22,9 +22,10 @@
             // if(strlen($password) < 6) {
             //     $password_error = "Password must be minimum of 6 characters";
             // }
-            $query="INSERT into `users` (name, mobile , locality, street, city, pin,email, password)
+            $query="INSERT into `users` (name, mobile , locality, street, city, pin, email, password)
                 VALUES ('$name', '$mobile', '$locality', '$street', '$city','$pin','$email','$hash')";
             $result   = mysqli_query($conn, $query);
+            echo mysqli_error($conn);
             if ($result) {
                 echo "<div class='form'>
                   <h3>You are registered successfully.</h3><br/>
@@ -34,7 +35,7 @@
             else {
                 echo "<div class='form'>
                   <h3>Required fields are missing.</h3><br/>
-                  <p class='link'>Click here to <a href='registration.php'>registration</a> again.</p>
+                  <p class='link'>Click here to <a href='peepawregisterboard.html'>register</a> again.</p>
                   </div>";
                 }
             }  
